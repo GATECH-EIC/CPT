@@ -254,6 +254,6 @@ class QConv2d(nn.Conv2d):
 
 if __name__ == '__main__':
     x = torch.rand(2, 3)
-    x_q = quantize(x, flatten_dims=(-1), num_bits=8, dequantize=True)
+    x_q = quantize(x, flatten_dims=(-1,), num_bits=8, dequantize=True)
     print(x)
     print(x_q)
